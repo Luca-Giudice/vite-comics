@@ -1,15 +1,17 @@
 <script>
+import AppMain from './components/AppMain.vue';
 import AppHeader from './AppHeader.vue';
+
 export default {
     name: 'comics',
-    components: {AppHeader}
+    components: {AppHeader, AppMain},
 }
 </script>
 
 
 <template>
     <app-header></app-header>
-    <main></main>
+    <app-main></app-main>
     <footer></footer>
 </template>
 
