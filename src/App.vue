@@ -1,10 +1,11 @@
 <script>
 import AppMain from './components/AppMain.vue';
 import AppHeader from './AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
     name: 'comics',
-    components: {AppHeader, AppMain},
+    components: {AppHeader, AppMain, AppFooter},
 }
 </script>
 
@@ -12,7 +13,7 @@ export default {
 <template>
     <app-header></app-header>
     <app-main></app-main>
-    <footer></footer>
+    <app-footer></app-footer>
 </template>
 
 <style>
@@ -21,6 +22,11 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* stile */
+*{
+    font-family: sans-serif;
 }
 
 img{
