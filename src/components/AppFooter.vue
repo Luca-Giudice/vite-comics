@@ -116,6 +116,26 @@ export default {
         <section class="social">
             <section class="container">
                 <button> SING-UP NOW!</button>
+                <ul>
+                    <li>
+                        <a href="#">FOLLOW US</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/footer-facebook.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/footer-youtube.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/footer-periscope.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/footer-pinterest.png" alt=""></a>
+                    </li>
+                </ul>
 
             </section>
 
@@ -147,5 +167,20 @@ a{
 
 .social{
     background-color: rgb(48, 48, 48);
+    padding: 2rem 0;
+}
+.social .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social a{
+    color: rgb(2, 130, 249);
 }
 </style>

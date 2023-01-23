@@ -11,11 +11,25 @@ export default {
             <h2>content goes heare</h2>
         </section >
         <section id='merch'>
-            <ul>
-                <li>
-                    <a href="">prodotti</a>
-                </li>
-            </ul>
+            <div class="container">
+
+                <ul>
+                    <li>
+                        <a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt=""> <p>DIGITAL COMICS</p></a>
+                        
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/buy-comics-merchandise.png" alt=""> <p>DIGITAL COMICS</p></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/buy-comics-shop-locator.png" alt=""> <p>DIGITAL COMICS</p></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/buy-comics-subscriptions.png" alt=""> <p>DIGITAL COMICS</p></a>
+                    </li>
+                    
+                </ul>
+            </div>
 
         </section>
     </main>
@@ -31,6 +45,20 @@ export default {
 #merch{
     background-color: rgb(2, 130, 249);
     text-align: center;
+    padding: 3rem 3rem;
+}
+#merch ul{
+    display: flex;
+    justify-content: space-around;
+}
+#merch a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#merch img{
+    width: 30%;
 }
 h2{
     color: white;
