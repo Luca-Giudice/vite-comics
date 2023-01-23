@@ -154,6 +154,7 @@ footer{
 .nav-footer{
     display: flex;
     gap: 30px;
+    padding-bottom: 2rem;
 }
 
 li{
@@ -182,5 +183,16 @@ a{
 
 .social a{
     color: rgb(2, 130, 249);
+}
+
+.social button{
+    border: 2px solid dodgerblue;
+    padding: 4px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+.footer-col{
+    padding-top: 8px;
 }
 </style>

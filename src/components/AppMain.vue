@@ -27,6 +27,11 @@ export default {
                     <li>
                         <a href="#"><img src="../assets/img/buy-comics-subscriptions.png" alt=""> <p>DIGITAL COMICS</p></a>
                     </li>
+                    <li>
+                        <a href="#"><img src="../assets/img/buy-dc-power-visa.svg" alt="">
+                            <p>DC POWER VISA</p>
+                        </a>
+                    </li>
                     
                 </ul>
             </div>
@@ -39,7 +44,7 @@ export default {
 #products{
     background-color: black;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 4rem 1rem;
 }
 #merch{
@@ -49,24 +54,27 @@ export default {
 }
 #merch ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5px;
+}
+
+ul li{
+    list-style-type: none;
 }
 #merch a{
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
 
 #merch img{
-    width: 30%;
+    width: 20%;
 }
 h2{
     color: white;
 }
 
-ul{
-
-}
 
 a{
     color: wheat;
