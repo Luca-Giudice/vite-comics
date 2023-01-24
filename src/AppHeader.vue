@@ -1,6 +1,23 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data(){
+        return{
+            links: [
+                
+                { text: 'CHARACTERS', ulr: '#'},
+                { text: 'COMICS', ulr: '#'},
+                { text: 'MOVIES', ulr: '#'},
+                { text: 'TV', ulr: '#'},
+                { text: 'GAMES', ulr: '#'},
+                { text: 'COLLECTIBLES', ulr: '#'},
+                { text: 'VIDEOS', ulr: '#'},
+                { text: 'FANS', ulr: '#'},
+                { text: 'NEWS', ulr: '#' },
+                { text: 'SHOP', ulr: '#' }
+            ]
+        }
+    }
 }
 </script>
 
@@ -13,16 +30,7 @@ export default {
         </figure>
         <nav>
             <ul>
-                <li><a href="#">CHARACTERS</a></li>
-                <li><a href="#">COMICS</a></li>
-                <li><a href="#">MOVIES</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">GAMES</a></li>
-                <li><a href="#">COLLECTIBLES</a></li>
-                <li><a href="#">VIDEOS</a></li>
-                <li><a href="#">FANS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">SHOP</a></li>
+                <li v-for="link in links" :key="link.text"><a :href="link.url" v-text="link.text"></a></li>
                 
             </ul>
         </nav>
@@ -30,7 +38,7 @@ export default {
 </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 figure {
     text-align: center;
 }
@@ -42,18 +50,18 @@ ul{
     margin: 30px;
     padding: 0;
     
-}
-
-ul li{
-    list-style-type: none;
-
-}
-
-ul li a {
-    padding: 4px;
-    color: black;
-    text-decoration: solid;
-    font-size: 13px;
+    
+    li{
+        list-style-type: none;
+        
+        
+        a {
+            padding: 4px;
+            color: black;
+            text-decoration: solid;
+            font-size: 13px;
+        }
+    }
 }
 
 ul li a:hover {

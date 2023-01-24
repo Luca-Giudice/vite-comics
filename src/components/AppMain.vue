@@ -1,6 +1,17 @@
 <script>
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    data(){
+        return{
+            images:[
+                { img:'../assets/img/buy-comics-digital-comics.png', text:'DIGITAL COMICS'},
+                { img: '../assets/img/buy-comics-merchandise.png', text: 'DC MERCHANDISE' },
+                { img: '../assets/img/buy-comics-shop-locator.png', text: 'SUBSCRITION' },
+                { img: '../assets/img/buy-comics-subscriptions.png', text: 'COMIC SHOP LOCATOR' },
+                { img: '../assets/img/buy-dc-power-visa.svg.png', text: 'DC POWER VISA' },
+            ]
+        }
+    }
 };
 </script>
 
@@ -14,24 +25,11 @@ export default {
             <div class="container">
 
                 <ul>
-                    <li>
-                        <a href="#"><img src="../assets/img/buy-comics-digital-comics.png" alt=""> <p>DIGITAL COMICS</p></a>
+                    <li v-for="image in images" :key="image.img">
+                        <a href="#"><img :src="image.img" alt="#"> <p>{{image.text}}</p></a>
                         
                     </li>
-                    <li>
-                        <a href="#"><img src="../assets/img/buy-comics-merchandise.png" alt=""> <p>DIGITAL COMICS</p></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../assets/img/buy-comics-shop-locator.png" alt=""> <p>DIGITAL COMICS</p></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../assets/img/buy-comics-subscriptions.png" alt=""> <p>DIGITAL COMICS</p></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../assets/img/buy-dc-power-visa.svg" alt="">
-                            <p>DC POWER VISA</p>
-                        </a>
-                    </li>
+                   
                     
                 </ul>
             </div>
@@ -40,7 +38,7 @@ export default {
     </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 #products{
     background-color: black;
     text-align: center;
@@ -51,25 +49,24 @@ export default {
     background-color: rgb(2, 130, 249);
     text-align: center;
     padding: 3rem 3rem;
-}
-#merch ul{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-ul li{
-    list-style-type: none;
-}
-#merch a{
-    display: flex;
-    align-items: center;
-
-    gap: 10px;
-}
-
-#merch img{
-    width: 20%;
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        
+        li{
+            list-style-type: none;
+        }
+    }
+    a{
+        display: flex;
+        align-items: center;
+        
+        gap: 10px;
+    }
+    img{
+        width: 20%;
+    }
 }
 h2{
     color: white;
